@@ -8,11 +8,9 @@ MongoClient.connect(url,(err,client)=>{
     }
     console.log('conected to mongo db');
 
-   client.db(dbName).collection('Todos').find({complete:true}).toArray().then((todo)=>{
-      console.log(JSON.stringify(todo,undefined,2));
-   },(err)=>{
-      console.log(`error ${err}`);
-   });
+  //deleteMany,deleteOne,findOneAndDelete
   
+ 
+
     
 });
