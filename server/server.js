@@ -31,6 +31,14 @@ App.get('/todos',(req,res)=>{
     res.status(400).send(e);
   })
 });
+
+App.get('/todos/:id',(req,res)=>{
+ 
+res.send(req.params);
+
+});
+
+
 App.listen(3000,()=>{
     console.log('started port 3000');
 });
