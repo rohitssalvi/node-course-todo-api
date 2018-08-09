@@ -6,7 +6,7 @@ var {mongoose}=require('./db/mongoose');
 var {Todo} =require('./models/Todo');
 
 var App=express();
-
+const port=process.env.PORT || 3000;
 
 App.use(bodyParser.json());
 
@@ -39,6 +39,6 @@ res.send(req.params);
 });
 
 
-App.listen(3000,()=>{
-    console.log('started port 3000');
+App.listen(port,()=>{
+    console.log(`started port ${port}`);
 });
